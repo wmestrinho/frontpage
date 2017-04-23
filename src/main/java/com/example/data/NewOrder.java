@@ -9,9 +9,7 @@ import javax.persistence.*;
  */
 @Entity
 public class NewOrder {
-
-    @Id
-    @GeneratedValue
+    @Id @GeneratedValue
     private long id;
     private String item;
     private String material;

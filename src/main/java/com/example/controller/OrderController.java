@@ -9,15 +9,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.mail.MailException;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
+
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 /**
  * Created by WagnerMestrinho on 4/12/17.
@@ -31,16 +34,15 @@ public class OrderController {
     @Autowired
     NewOrderRepo newOrderRepo;
 
-    @Value("${upload.location}")
-    private String uploadLocation;
 
 
 
-    @RequestMapping(path = "/savingOrder", method = RequestMethod.POST,
+
+   /* @RequestMapping(path = "/savingOrder", method = RequestMethod.POST,
             consumes = MediaType.ALL_VALUE)
-    public String createOrder(Model dataToJsp, OrderForm PictureRef) throws Exception {
+    public NewOrder createOrder(Model dataToJsp, OrderForm PictureRef) throws Exception {
 
-        NewOrder saveToDB = null;
+       /*String saveToDB = null;
         // only do copy work if local file was uploaded
         if (!PictureRef.getSketch().getOriginalFilename().isEmpty()) {
             String uploadedFileName = System.currentTimeMillis() + "_" + PictureRef.getSketch().getOriginalFilename();
@@ -51,39 +53,87 @@ public class OrderController {
         newOrderRepo.save(saveToDB);
         // if successful save, add message
 
-        if (saveToDB.getId() > 0) {
-            dataToJsp.addAttribute("order_number_success",
-                    String.format("Your order # '%s' has been sent", saveToDB.getId()));
-
+        public NewOrder loadUserImage(@PathVariable long id, @RequestParam MultipartFile sketch) throws Exception {
+            String uploadedFileName = null;
+            NewOrder carUser = newOrderRepo.findOne(id);
+            if (carUser != null) {
+                if (!sketch.isEmpty()) {
+                    try {
+                        uploadedFileName = System.currentTimeMillis() + "_" + sketch.getOriginalFilename();
+                        Files.copy(sketch.getInputStream(), Paths.get(uploadLocation + uploadedFileName));
+                        carUser.setPicture(uploadedFileName);
+                        newOrderRepo.save(carUser);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
         }
-        return "forward:/sendingEmail";
-
-    }
-    @RequestMapping("/sendingEmail")
-    public String sendingEmail () {
-        String dest = "/index";
+        @RequestMapping (path = "/savingOrder", method = RequestMethod.POST)
+    public String orderSucess(){
 
             NewOrder newOrder = new NewOrder();
             newOrder.setEmail(newOrder.getEmail());
-            newOrder.setDate(newOrder.getDate());
-            newOrder.setPicture(newOrder.getPicture());
-            newOrder.setName(newOrder.getName());
-            newOrder.setId(newOrder.getId());
-            newOrder.setDescription(newOrder.getDescription());
-            newOrder.setCount(newOrder.getCount());
-            newOrder.setMaterial(newOrder.getMaterial());
-            newOrder.setPhone(newOrder.getPhone());
-            newOrder.setItem(newOrder.getItem());
+        }
+
+    @RequestMapping(path = "/savingOrder", method = RequestMethod.GET)
+    public NewOrder confirmOrder(@RequestBody OrderForm tempOrder) {
+        NewOrder order = new NewOrder(tempOrder);
+
+        order = newOrderRepo.findOne(tempOrder.getId());
+
+            String message = "You have pending trip for your confirmation \n"+
+                    "Trip details:\n"+
+                    "Start date:"+trip.getStartDate().toString()+
+                    "\nEnd date:"+trip.getEndDate().toString()+
+                    "\nCar:"+trip.getCar().getMake()+","+trip.getCar().getModel()+
+                    "\nRequester phone:"+carUser.getPhone()+
+                    "\n\n\nBest Regards";
+            sendMail("Car Corner", trip.getCar().getOwner(),message);
+        }
+        return trip;*/
+   /* }
+
+        newOrderRepo.save(order);
+        String message = "Your Order is confirmed \n"+
+                "Order Details:\n"+
+                "Start date:"+order.getDate()+
+                "\nAhoy! "+order.getName()+
+                "\nWe Need "+order.getCount()+
+                " of "+ order.getItem()+
+                " on "+ order.getMaterial()+
+                "\n best described as"+ order.getDescription()+
+                "\nphone:"+order.getPhone()+
+                "\n\n\nkeep in touch!";
+        sendMail("Absolutely", order.getName() , message);
+        return order;
+    }*/
+    @RequestMapping (path = "/savingOrder", method = RequestMethod.POST )
+    public String emailSuccess(Model mapOfDataForJsp, NewOrder tempOrder){
+
+        NewOrder order = new NewOrder();
+        order.setName(tempOrder.getName());
+        order.setEmail(tempOrder.getEmail());
+        order.setItem(tempOrder.getItem());
+        order.setDescription(tempOrder.getItem());
+        order.setPhone(tempOrder.getPhone());
+        order.setDate(tempOrder.getDate());
+        order.setId(tempOrder.getId());
+        order.setPicture(tempOrder.getPicture());
+        order.setMaterial(tempOrder.getMaterial());
+        order.setCount(tempOrder.getCount());
+
+        newOrderRepo.save(order);
 
 
-            try {
-                emailService.sendConfirmation(newOrder);
-            } catch (MailException e) {
-                //catch error
-            }
+            emailService.sendConfirmation(order);
+        emailService.sendOrderArchive(order);
+        {
 
-        return dest ;
+    }
+        mapOfDataForJsp.addAttribute("success_msg", "Order submitted!");
 
+    return "/index" +order.getId();
 
     }
 }

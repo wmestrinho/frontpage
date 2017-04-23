@@ -92,6 +92,12 @@
         <body>
 
         <div class="container">
+            <c:if test="${succes_msg != null}">
+            <div class="alert alert-success">
+                <c:out value="${succes_msg}"/>
+            </div>
+            </c:if>
+        <div class="container">
             <h3>Contact Info</h3>
             <form action="/savingOrder" enctype="multipart/form-data" method="post">
                 <label for="name">Name</label>
