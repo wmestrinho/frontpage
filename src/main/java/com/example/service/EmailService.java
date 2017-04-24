@@ -30,11 +30,13 @@ public class EmailService  {
 
     private JavaMailSender javaMailSender;
 
-
     @Autowired
     public EmailService(JavaMailSender javaMailSender){
         this.javaMailSender = javaMailSender;
     }
+
+    // TODO email service for multi-part file attachment
+
     /*public void sendConfirmation(NewOrder newOrder) throws MailException{
         //send email
         MimeMessagePreparator preparator = new MimeMessagePreparator() {
@@ -56,24 +58,25 @@ public class EmailService  {
         //Sending Order To Email Archive
 
         SimpleMailMessage mail = new SimpleMailMessage();
-        mail.setFrom("absolutelyplausible@gmail.com");
-        mail.setTo("absolutelyplausible@gmail.com");
-        mail.setSubject("#" +tempOrder.getId()+"+PROJECT" + ".2.DUE[" +tempOrder.getDate()+ "]");
-        mail.setText("Order # "+tempOrder.getId()+
-                " \nDue " +tempOrder.getDate()+
-                " \nFor " +tempOrder.getName()+
-                        "\n *Phone: " +tempOrder.getPhone()+
-                        "\n *Reply To: " +tempOrder.getEmail()+
-                "\n\n  " +tempOrder.getCount()+
-                " - " +tempOrder.getItem()+
-                " of " +tempOrder.getMaterial()+
-                "\n\n****INSTRUCTIONS****\n" +
-                        "" +tempOrder.getDescription()+ "" +
-                "\n FILENAME: " +tempOrder.getPicture()+
-                //TODO Image Attachment
-                "\n\n\n LET'S GO! "
-                );
-        javaMailSender.send(mail);
+
+            mail.setFrom("order4porjects@gmail.com");
+            mail.setTo("order4porjects@gmail.com");
+            mail.setSubject("#" +tempOrder.getId()+"+PROJECT" + ".2.DUE[" +tempOrder.getDate()+ "]");
+            mail.setText("Order # "+tempOrder.getId()+
+                            " \nDue " +tempOrder.getDate()+
+                            " \nFor " +tempOrder.getName()+
+                                    "\n *Phone: " +tempOrder.getPhone()+
+                                    "\n *Reply To: " +tempOrder.getEmail()+
+                            "\n\n  " +tempOrder.getCount()+
+                            " - " +tempOrder.getItem()+
+                            " of " +tempOrder.getMaterial()+
+                            "\n\n****INSTRUCTIONS****\n" +
+                                    "" +tempOrder.getDescription()+ "" +
+                            "\n FILENAME: " +tempOrder.getPicture()+
+                            //TODO Image Attachment
+                            "\n\n\n LET'S GO! "
+                            );
+            javaMailSender.send(mail);
     }
 
     public void sendConfirmation(NewOrder newOrder) throws MailException{
@@ -81,20 +84,21 @@ public class EmailService  {
         //Sending Confirmation For NewOrder User
 
         SimpleMailMessage mail = new SimpleMailMessage();
-        mail.setFrom("absolutelyplausible@gmail.com");
-        mail.setTo(newOrder.getEmail());
-        mail.setSubject("Your order for " +newOrder.getItem()+ " has been sent!");
-        mail.setText("Thanks" +newOrder.getName()+
-                        "\nYour order: #" +newOrder.getId()+
-                        "\nTo build a " +newOrder.getItem()+
-                        " by re-purposing " +newOrder.getMaterial()+
-                " has been submitted!" +
-                        "\n\n\n\nWe'll number" +newOrder.getPhone()+
-                        "\n or through email " +newOrder.getEmail()+
-                        "\n\n\n\n" +
-                        "Best "
-                        );
-        javaMailSender.send(mail);
+
+            mail.setFrom("order4porjects@gmail.com");
+            mail.setTo(newOrder.getEmail());
+            mail.setSubject("Your order for " +newOrder.getItem()+ " has been sent!");
+            mail.setText("Thanks" +newOrder.getName()+
+                            "\nYour order: #" +newOrder.getId()+
+                            "\nTo build a " +newOrder.getItem()+
+                            " by re-purposing " +newOrder.getMaterial()+
+                            " has been submitted!" +
+                            "\n\nWe'll number" +newOrder.getPhone()+
+                            "\n or through email " +newOrder.getEmail()+
+                            "\n\n\n\n" +
+                            "Best "
+                            );
+            javaMailSender.send(mail);
 
     }
 
