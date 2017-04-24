@@ -10,7 +10,7 @@
             -webkit-flex-flow: row wrap;
             flex-flow: row wrap;
             font-family: 'Roboto', sans-serif;
-            text-align: left;
+            text-align: center;
         }
 
         .flex-container > * {

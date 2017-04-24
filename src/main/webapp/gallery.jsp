@@ -96,48 +96,8 @@
     </nav>
     <article class="article">
         <style>
-
-            input[type=text], select, textarea {
-                width: 100%;
-                font-family: 'Roboto', sans-serif;
-                padding: 3px;
-                box-sizing: border-box;
-                margin-top: 6px;
-                margin-bottom: 16px;
-                text-align: left;
-
-            }
-
-            input[type=submit] {
-
-                background-color: #116980;
-                font-family: 'Roboto', sans-serif;
-                color: #ffffff;
-                border: solid;
-                padding: 12px 20px;
-                border-radius: 0px;
-                cursor: pointer;
-                width: 250px;
-            }
-
-            input[type=submit]:hover {
-                background-color: #00740e;
-
-            }
-            .container {
-                text-align: center;
-                border-radius: 5px;
-                background-color: #ffffff;
-                padding: 20px;
-            }
-</style>
-<style>
-
             div.gallery {
-                margin: 5px;
                 border: 1px solid #ccc;
-                float: left;
-                width: 180px;
             }
 
             div.gallery:hover {
@@ -150,40 +110,88 @@
             }
 
             div.desc {
-                font-family: 'Roboto', sans-serif;
+                padding: 15px;
                 text-align: center;
             }
-    </style>
 
-<body>
+            * {
+                box-sizing: border-box;
+            }
 
-    <div class="gallery">
-        <a target="_blank" href="img_fjords.jpg">
-            <img src="img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
-        </a>
-            <div class="desc">Add a description of the image here</div>
-    </div>
+            .responsive {
+                padding: 0 6px;
+                float: left;
+                width: 24.99999%;
+            }
 
-    <div class="gallery">
-        <a target="_blank" href="img_forest.jpg">
-            <img src="img_forest.jpg" alt="Forest" width="600" height="400">
-        </a>
-             <div class="desc">Add a description of the image here</div>
-    </div>
+            @media only screen and (max-width: 700px){
+                .responsive {
+                    width: 49.99999%;
+                    margin: 6px 0;
+                }
+            }
 
-    <div class="gallery">
-        <a target="_blank" href="img_lights.jpg">
-            <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
-         </a>
-        <div class="desc">Add a description of the image here</div>
-    </div>
+            @media only screen and (max-width: 500px){
+                .responsive {
+                    width: 100%;
+                }
+            }
 
-<div class="gallery">
-    <a target="_blank" href="img_mountains.jpg">
-        <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
-</div>
+            .clearfix:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
+        </head>
+        <body>
+
+        <h2>Responsive Image Gallery</h2>
+        <h4>Resize the browser window to see the effect.</h4>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="img_fjords.jpg">
+                    <img src="img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="img_forest.jpg">
+                    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="img_lights.jpg">
+                    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="img_mountains.jpg">
+                    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div style="padding:6px;">
+            <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+            <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+        </div>
 </body>
 
     </article>
