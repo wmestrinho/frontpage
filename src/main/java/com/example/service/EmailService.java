@@ -95,6 +95,7 @@ public class EmailService  {
                         "Best "
                         );
         javaMailSender.send(mail);
+
     }
 
 }

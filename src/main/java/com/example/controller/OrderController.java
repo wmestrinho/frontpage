@@ -25,7 +25,7 @@ import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 /**
  * Created by WagnerMestrinho on 4/12/17.
  */
-@RestController
+@Controller
 public class OrderController {
 
     @Autowired
@@ -34,108 +34,74 @@ public class OrderController {
     @Autowired
     NewOrderRepo newOrderRepo;
 
+    @Value("${upload.location}")
+    private String uploadLocation;
 
+    @RequestMapping (path = "/sendingEmail", method = RequestMethod.POST )
+    public String emailSuccess(Model dataForJsp, NewOrder tempOrder){
 
+        //create NewOrder for email
+        NewOrder emailOrder = new NewOrder();
+        emailOrder.setName(tempOrder.getName());
+        emailOrder.setEmail(tempOrder.getEmail());
+        emailOrder.setItem(tempOrder.getItem());
+        emailOrder.setDescription(tempOrder.getDescription());
+        emailOrder.setPhone(tempOrder.getPhone());
+        emailOrder.setDate(tempOrder.getDate());
+        emailOrder.setId(tempOrder.getId());
+        emailOrder.setPicture(tempOrder.getPicture());
+        emailOrder.setMaterial(tempOrder.getMaterial());
+        emailOrder.setCount(tempOrder.getCount());
 
+        //send emails
+        try {
+            emailService.sendConfirmation(emailOrder);
+            emailService.sendOrderArchive(emailOrder);
+        }catch (MailException e) {
 
-   /* @RequestMapping(path = "/savingOrder", method = RequestMethod.POST,
+            //catch error
+        }
+            //if successful save, add message
+            if(emailOrder.getId()!=0) {
+            dataForJsp.addAttribute("success_email_msg",
+                    "Order submitted! Please check your Email!");
+        }
+    return "forward:/savingOrder";
+
+    }
+
+    // path for saving to database
+    @RequestMapping(path = "/savingOrder", method = RequestMethod.POST,
             consumes = MediaType.ALL_VALUE)
-    public NewOrder createOrder(Model dataToJsp, OrderForm PictureRef) throws Exception {
+    public String createOrder(Model dataToJsp, OrderForm multiPart) throws Exception {
 
-       /*String saveToDB = null;
-        // only do copy work if local file was uploaded
-        if (!PictureRef.getSketch().getOriginalFilename().isEmpty()) {
-            String uploadedFileName = System.currentTimeMillis() + "_" + PictureRef.getSketch().getOriginalFilename();
+        //destination view
+        String dest = "/index";
+
+        NewOrder saveToDB = null;
+
+        // check if local file was uploaded, then do copy work
+        if(!multiPart.getSketch().getOriginalFilename().isEmpty()) {
+
+            // add current time to file name in
+            String uploadedFileName = System.currentTimeMillis() + "_" + multiPart.getSketch().getOriginalFilename();
+
             // copy from input stream to computer disk
-            Files.copy(PictureRef.getSketch().getInputStream(), Paths.get(uploadLocation + uploadedFileName));
-            saveToDB = new NewOrder(PictureRef, uploadedFileName);
+            Files.copy(multiPart.getSketch().getInputStream(), Paths.get(uploadLocation + uploadedFileName));
+            saveToDB = new NewOrder(multiPart, uploadedFileName);
         }
+
+        // save to database
         newOrderRepo.save(saveToDB);
+
         // if successful save, add message
-
-        public NewOrder loadUserImage(@PathVariable long id, @RequestParam MultipartFile sketch) throws Exception {
-            String uploadedFileName = null;
-            NewOrder carUser = newOrderRepo.findOne(id);
-            if (carUser != null) {
-                if (!sketch.isEmpty()) {
-                    try {
-                        uploadedFileName = System.currentTimeMillis() + "_" + sketch.getOriginalFilename();
-                        Files.copy(sketch.getInputStream(), Paths.get(uploadLocation + uploadedFileName));
-                        carUser.setPicture(uploadedFileName);
-                        newOrderRepo.save(carUser);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
+        if(saveToDB.getId()!=0) {
+            dataToJsp.addAttribute("success_msg",
+                    String.format("Order #'%s' was created!", saveToDB.getId()));
         }
-        @RequestMapping (path = "/savingOrder", method = RequestMethod.POST)
-    public String orderSucess(){
-
-            NewOrder newOrder = new NewOrder();
-            newOrder.setEmail(newOrder.getEmail());
-        }
-
-    @RequestMapping(path = "/savingOrder", method = RequestMethod.GET)
-    public NewOrder confirmOrder(@RequestBody OrderForm tempOrder) {
-        NewOrder order = new NewOrder(tempOrder);
-
-        order = newOrderRepo.findOne(tempOrder.getId());
-
-            String message = "You have pending trip for your confirmation \n"+
-                    "Trip details:\n"+
-                    "Start date:"+trip.getStartDate().toString()+
-                    "\nEnd date:"+trip.getEndDate().toString()+
-                    "\nCar:"+trip.getCar().getMake()+","+trip.getCar().getModel()+
-                    "\nRequester phone:"+carUser.getPhone()+
-                    "\n\n\nBest Regards";
-            sendMail("Car Corner", trip.getCar().getOwner(),message);
-        }
-        return trip;*/
-   /* }
-
-        newOrderRepo.save(order);
-        String message = "Your Order is confirmed \n"+
-                "Order Details:\n"+
-                "Start date:"+order.getDate()+
-                "\nAhoy! "+order.getName()+
-                "\nWe Need "+order.getCount()+
-                " of "+ order.getItem()+
-                " on "+ order.getMaterial()+
-                "\n best described as"+ order.getDescription()+
-                "\nphone:"+order.getPhone()+
-                "\n\n\nkeep in touch!";
-        sendMail("Absolutely", order.getName() , message);
-        return order;
-    }*/
-    @RequestMapping (path = "/savingOrder", method = RequestMethod.POST )
-    public String emailSuccess(Model mapOfDataForJsp, NewOrder tempOrder){
-
-        NewOrder order = new NewOrder();
-        order.setName(tempOrder.getName());
-        order.setEmail(tempOrder.getEmail());
-        order.setItem(tempOrder.getItem());
-        order.setDescription(tempOrder.getItem());
-        order.setPhone(tempOrder.getPhone());
-        order.setDate(tempOrder.getDate());
-        order.setId(tempOrder.getId());
-        order.setPicture(tempOrder.getPicture());
-        order.setMaterial(tempOrder.getMaterial());
-        order.setCount(tempOrder.getCount());
-
-        newOrderRepo.save(order);
-
-
-            emailService.sendConfirmation(order);
-        emailService.sendOrderArchive(order);
-        {
-
+        return dest;
     }
-        mapOfDataForJsp.addAttribute("success_msg", "Order submitted!");
 
-    return "/index" +order.getId();
-
-    }
 }
 
 
