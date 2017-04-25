@@ -53,9 +53,9 @@ public class EmailService  {
         javaMailSender.send(preparator);
     }*/
 
-    public void sendOrderArchive(NewOrder tempOrder) throws MailException {
+    //Sending Order To Email Archive
 
-        //Sending Order To Email Archive
+    public void sendOrderArchive(NewOrder tempOrder) throws MailException {
 
         SimpleMailMessage mail = new SimpleMailMessage();
 
@@ -72,31 +72,31 @@ public class EmailService  {
                             " of " +tempOrder.getMaterial()+
                             "\n\n****INSTRUCTIONS****\n" +
                                     "" +tempOrder.getDescription()+ "" +
-                            "\n FILENAME: " +tempOrder.getPicture()+
+                            "\n FILENAME: " +tempOrder.getId()+
                             //TODO Image Attachment
                             "\n\n\n LET'S GO! "
                             );
             javaMailSender.send(mail);
     }
 
-    public void sendConfirmation(NewOrder newOrder) throws MailException{
+    //Sending Confirmation For NewOrder User
 
-        //Sending Confirmation For NewOrder User
+    public void sendConfirmation(NewOrder newOrder) throws MailException{
 
         SimpleMailMessage mail = new SimpleMailMessage();
 
             mail.setFrom("order4porjects@gmail.com");
             mail.setTo(newOrder.getEmail());
             mail.setSubject("Your order for " +newOrder.getItem()+ " has been sent!");
-            mail.setText("Thanks" +newOrder.getName()+
+            mail.setText("Thanks " +newOrder.getName()+
                             "\nYour order: #" +newOrder.getId()+
                             "\nTo build a " +newOrder.getItem()+
                             " by re-purposing " +newOrder.getMaterial()+
-                            " has been submitted!" +
-                            "\n\nWe'll number" +newOrder.getPhone()+
-                            "\n or through email " +newOrder.getEmail()+
+                            " has been submitted! " +
+                            "\n\nWe'll call or text " +newOrder.getPhone()+
+                            "\nReach through this email " +newOrder.getEmail()+
                             "\n\n\n\n" +
-                            "Best "
+                            " keeptheCYCLE STAYintouch "
                             );
             javaMailSender.send(mail);
 

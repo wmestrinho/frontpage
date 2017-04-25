@@ -3,7 +3,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .fa-tumblr {
+            background: #2c4762;
+            color: white;
+        }
 
         .flex-container {
             display: -webkit-flex;
@@ -82,12 +132,52 @@
             .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
             footer {-webkit-order:3;order:3;}
         }
+
+        div.gallery {
+            border: 1px solid #ccc;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+
+        @media only screen and (max-width: 700px){
+            .responsive {
+                width: 49.99999%;
+            }
+        }
+
+        @media only screen and (max-width: 500px){
+            .responsive {
+                width: 100%;
+            }
+        }
+
     </style>
 </head>
 <body>
 
 <div class="flex-container">
-
     <header>
         <div class="logo">
             <img src="/imgs/logobackground.jpg">
@@ -101,56 +191,8 @@
             <li><a href="/gallery.jsp">GALLERY</a></li>
         </ul>
     </nav>
+
     <article class="article">
-        <style>
-
-            div.gallery {
-                border: 1px solid #ccc;
-            }
-
-            div.gallery:hover {
-                border: 1px solid #777;
-            }
-
-            div.gallery img {
-                width: 100%;
-                height: auto;
-            }
-
-            div.desc {
-                padding: 15px;
-                text-align: center;
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-
-            .responsive {
-                padding: 0 6px;
-                float: left;
-                width: 24.99999%;
-            }
-
-            @media only screen and (max-width: 700px){
-                .responsive {
-                    width: 49.99999%;
-                }
-            }
-
-            @media only screen and (max-width: 500px){
-                .responsive {
-                    width: 100%;
-                }
-            }
-
-            .clearfix:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-        </style>
-        </head>
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="/imgs/logobackground.jpg">
@@ -187,13 +229,17 @@
                 <div class="desc">Add a description of the image here</div>
             </div>
         </div>
-        <div class="clearfix"></div>
-        <div style="padding:6px;">
-            <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
-            <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
-        </div>
-    </article>
-    <footer><h3>Copyright &copy; Absolutely</h3></footer>
+</article>
+</div>
+    <footer>
+        <a href="https://www.facebook.com/absolutelyplausible/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/soplausibile" class="fa fa-twitter"></a>
+        <a href="https://plus.google.com/u/0/103469953076983800586" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-tumblr"></a>
+    </footer>
 </div>
 </body>
 </html>

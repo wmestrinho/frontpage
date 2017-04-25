@@ -45,6 +45,9 @@ public class OrderController {
     @RequestMapping (path = "/sendingEmail", method = RequestMethod.POST )
     public String emailSuccess(Model dataForJsp, NewOrder tempOrder){
 
+        //destination view
+        String dest = "/index";
+
         //create NewOrder for email
         NewOrder emailOrder = new NewOrder();
         emailOrder.setName(tempOrder.getName());
@@ -71,7 +74,7 @@ public class OrderController {
             dataForJsp.addAttribute("success_email_msg",
                     "Order submitted! Please check your Email!");
         }
-    return "forward:/savingOrder";
+    return dest;
 
     }
 
@@ -80,8 +83,7 @@ public class OrderController {
             consumes = MediaType.ALL_VALUE)
     public String createOrder(Model dataToJsp, OrderForm multiPart) throws Exception {
 
-        //destination view
-        String dest = "/index";
+        //destination view  String dest = "/index";
 
         NewOrder saveToDB = null;
 
@@ -104,7 +106,7 @@ public class OrderController {
             dataToJsp.addAttribute("success_msg",
                     String.format("Order #'%s' was created!", saveToDB.getId()));
         }
-        return dest;
+        return "forward:/savingEmail";
     }
 
 }
