@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <style>
 
@@ -25,22 +25,23 @@
         }
 
         div.logo{
-
             float: left;
             width: 100px;
         }
 
         div.logo img {
+            float: right;
             width: 85%;
             height: auto;
         }
 
         header {background: #116980;color: #e9ec9b;}
 
-        footer {background: #116980;color: #e9ec9b;}
+        footer {background: #ffffff;color: #116980;}
 
         .nav {
-            background: #ffffff;
+            float: inherit;
+            background: #116980;
             font-size: larger;
             text-decoration: #e9ec9b;
         }
@@ -59,7 +60,6 @@
             font-family: 'Roboto', sans-serif;
             font-size: larger;
             color: #e9ec9b;
-            text-decoration: #e9ec9b;
             text-align: center;
         }
 
@@ -70,8 +70,15 @@
             padding: 20px;
         }
 
+        .header {
+            background-color: #2196F3;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
         @media all and (min-width: 768px) {
-            .nav {text-align:center;font-family: 'Roboto', sans-serif;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+            .nav {text-align:center;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
             .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
             footer {-webkit-order:3;order:3;}
         }
@@ -83,9 +90,9 @@
 
     <header>
         <div class="logo">
-            <img src="/imgs/logowhite.jpg">
+            <img src="/imgs/logobackground.jpg">
         </div>
-        <h1>keeptheCYCLE </h1>
+        <h1>keeptheCYCLE</h1>
     </header>
     <nav class="nav">
         <ul>
@@ -96,6 +103,7 @@
     </nav>
     <article class="article">
         <style>
+
             div.gallery {
                 border: 1px solid #ccc;
             }
@@ -127,7 +135,6 @@
             @media only screen and (max-width: 700px){
                 .responsive {
                     width: 49.99999%;
-                    margin: 6px 0;
                 }
             }
 
@@ -144,15 +151,10 @@
             }
         </style>
         </head>
-        <body>
-
-        <h2>Responsive Image Gallery</h2>
-        <h4>Resize the browser window to see the effect.</h4>
-
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="img_fjords.jpg">
-                    <img src="img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
+                <a target="_blank" href="/imgs/logobackground.jpg">
+                    <img src="/imgs/logobackground.jpg" alt="Trolltunga Norway" width="300" height="200">
                 </a>
                 <div class="desc">Add a description of the image here</div>
             </div>
@@ -161,8 +163,8 @@
 
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="img_forest.jpg">
-                    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+                <a target="_blank" href="/imgs/logoblackcircle.jpg">
+                    <img src="/imgs/logoblackcircle.jpg" alt="Forest" width="600" height="400">
                 </a>
                 <div class="desc">Add a description of the image here</div>
             </div>
@@ -170,8 +172,8 @@
 
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="img_lights.jpg">
-                    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+                <a target="_blank" href="/imgs/logoblackcircle.jpg">
+                    <img src="/imgs/logoblackcircle.jpg" alt="Northern Lights" width="600" height="400">
                 </a>
                 <div class="desc">Add a description of the image here</div>
             </div>
@@ -179,21 +181,17 @@
 
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="img_mountains.jpg">
-                    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+                <a target="_blank" href="/imgs/logowhite.jpg">
+                    <img src="/imgs/logowhite.jpg" alt="Mountains" width="600" height="400">
                 </a>
                 <div class="desc">Add a description of the image here</div>
             </div>
         </div>
-
         <div class="clearfix"></div>
-
         <div style="padding:6px;">
             <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
             <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
         </div>
-</body>
-
     </article>
     <footer><h3>Copyright &copy; Absolutely</h3></footer>
 </div>
