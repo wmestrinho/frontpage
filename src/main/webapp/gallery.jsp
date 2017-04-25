@@ -71,7 +71,7 @@
         }
 
         .article {
-            text-align: left;
+            text-align: center;
         }
 
         div.logo{
@@ -118,13 +118,6 @@
             border-radius: 5px;
             background-color: #ffffff;
             padding: 20px;
-        }
-
-        .header {
-            background-color: #2196F3;
-            color: white;
-            text-align: center;
-            padding: 15px;
         }
 
         @media all and (min-width: 768px) {
@@ -202,6 +195,41 @@
             </div>
         </div>
 
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="/imgs/logoblackcircle.jpg">
+                    <img src="/imgs/logoblackcircle.jpg" alt="Forest" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="/imgs/logoblackcircle.jpg">
+                    <img src="/imgs/logoblackcircle.jpg" alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="/imgs/logowhite.jpg">
+                    <img src="/imgs/logowhite.jpg" alt="Mountains" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="/imgs/logobackground.jpg">
+                    <img src="/imgs/logobackground.jpg" alt="Trolltunga Norway" width="300" height="200">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
 
         <div class="responsive">
             <div class="gallery">
@@ -229,18 +257,16 @@
                 <div class="desc">Add a description of the image here</div>
             </div>
         </div>
-</article>
-</div>
-    <footer>
-        <a href="https://www.facebook.com/absolutelyplausible/" class="fa fa-facebook"></a>
-        <a href="https://twitter.com/soplausibile" class="fa fa-twitter"></a>
-        <a href="https://plus.google.com/u/0/103469953076983800586" class="fa fa-google"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-youtube"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-tumblr"></a>
-    </footer>
-</div>
+    </article>
+     </div>
+        <footer>
+            <a href="https://www.facebook.com/absolutelyplausible/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/soplausibile" class="fa fa-twitter"></a>
+            <a href="https://plus.google.com/u/0/103469953076983800586" class="fa fa-google"></a>
+            <a href="https://www.linkedin.com/in/wagner-mestrinho-031b41139/" class="fa fa-linkedin"></a>
+            <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/absolutelyplausible/" class="fa fa-instagram"></a>
+            <a href="https://absolutelyplausible.tumblr.com" class="fa fa-tumblr"></a>
+        </footer>
 </body>
 </html>
-

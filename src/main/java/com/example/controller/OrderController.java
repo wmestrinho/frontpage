@@ -79,7 +79,7 @@ public class OrderController {
     }
 
     // path for saving to database
-    @RequestMapping(path = "/savingOrder", method = RequestMethod.POST,
+    @RequestMapping(path = "/sendingOrder", method = RequestMethod.POST,
             consumes = MediaType.ALL_VALUE)
     public String createOrder(Model dataToJsp, OrderForm multiPart) throws Exception {
 
@@ -106,7 +106,7 @@ public class OrderController {
             dataToJsp.addAttribute("success_msg",
                     String.format("Order #'%s' was created!", saveToDB.getId()));
         }
-        return "forward:/savingEmail";
+        return "forward:/sendingEmail";
     }
 
 }

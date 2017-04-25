@@ -249,13 +249,13 @@
         </div>
     </article>
     <footer>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-google"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-youtube"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-tumblr"></a>
+        <a href="https://www.facebook.com/absolutelyplausible/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/soplausibile" class="fa fa-twitter"></a>
+        <a href="https://plus.google.com/u/0/103469953076983800586" class="fa fa-google"></a>
+        <a href="https://www.linkedin.com/in/wagner-mestrinho-031b41139/" class="fa fa-linkedin"></a>
+        <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+        <a href="https://www.instagram.com/absolutelyplausible/" class="fa fa-instagram"></a>
+        <a href="https://absolutelyplausible.tumblr.com" class="fa fa-tumblr"></a>
     </footer>
 </div>
 </body>
