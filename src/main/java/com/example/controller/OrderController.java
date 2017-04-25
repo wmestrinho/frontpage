@@ -20,8 +20,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
-import static sun.plugin2.message.JavaScriptSlotOpMessage.GET;
 
 /**
  * Created by WagnerMestrinho on 4/12/17.
