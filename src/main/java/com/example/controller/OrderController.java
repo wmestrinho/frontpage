@@ -21,6 +21,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+import static sun.plugin2.message.JavaScriptSlotOpMessage.GET;
 
 /**
  * Created by WagnerMestrinho on 4/12/17.
@@ -36,6 +37,12 @@ public class OrderController {
 
     @Value("${upload.location}")
     private String uploadLocation;
+
+    // route for index.jso
+    @RequestMapping("/")
+    public String indexRedirect(){
+        return "index";
+    }
 
     @RequestMapping (path = "/sendingEmail", method = RequestMethod.POST )
     public String emailSuccess(Model dataForJsp, NewOrder tempOrder){
