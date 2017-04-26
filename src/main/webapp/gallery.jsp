@@ -71,7 +71,8 @@
         }
 
         .article {
-            text-align: left;
+            text-align: center;
+
         }
 
         div.logo{
@@ -83,6 +84,7 @@
             float: right;
             width: 85%;
             height: auto;
+            cursor: default;
         }
 
         header {background: #ffffff;color: #116980;}
@@ -131,7 +133,7 @@
             display: inline-block;
             font-size: 16px;
             margin: 4px 2px;
-            cursor: none;
+            cursor: default;
         }
 
         .button:hover {
@@ -146,7 +148,7 @@
         }
 
         div.gallery {
-            border: 0px solid ;
+            border: 0px solid;
         }
 
         div.gallery img {
@@ -155,9 +157,8 @@
         }
 
         div.desc {
-            padding: 20px;
+            padding: 15px;
             text-align: center;
-            float: inherit;
         }
 
         .responsive {
@@ -176,6 +177,7 @@
                 width: 100%;
             }
         }
+
         .clearfix:after {
             content: "";
             display: table;

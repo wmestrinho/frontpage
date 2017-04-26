@@ -83,6 +83,7 @@
             float: right;
             width: 85%;
             height: auto;
+            cursor: default;
         }
 
         header {background: #ffffff;color: #116980;}
@@ -118,7 +119,6 @@
             padding: 15px 32px;
             text-decoration: none;
             margin: 4px 2px;
-
         }
 
         .button {
@@ -131,7 +131,7 @@
             display: inline-flex;
             font-size: 16px;
             margin: 4px 2px;
-            cursor: none;
+            cursor: default;
         }
 
         .button:hover {

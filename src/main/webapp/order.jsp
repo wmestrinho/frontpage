@@ -77,12 +77,14 @@
         div.logo{
             float: left;
             width: 100px;
+
         }
 
         div.logo img {
             float: right;
             width: 85%;
             height: auto;
+            cursor: default;
         }
 
         header {background: #ffffff;color: #116980;}
@@ -175,7 +177,7 @@
             display: inline-block;
             font-size: 16px;
             margin: 4px 2px;
-            cursor: none;
+            cursor: default;
         }
 
         .button:hover {
