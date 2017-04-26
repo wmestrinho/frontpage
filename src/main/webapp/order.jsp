@@ -85,46 +85,45 @@
             height: auto;
         }
 
-        header {background: #116980;color: #e9ec9b;}
+        header {background: #ffffff;color: #116980;}
 
         footer {background: #ffffff;color: #116980;}
 
         .nav {
-            float: inherit;
-            background: #116980;
+            padding: 20px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: #ffffff;
             font-size: larger;
-            text-decoration: #e9ec9b;
         }
 
         .nav ul {
             list-style-type: none;
-            font-family: 'Roboto', sans-serif;
             font-size: larger;
-            color: #e9ec9b;
-            text-decoration: #e9ec9b;
+            display: inline-block;
             padding: 0;
         }
 
         .nav ul a {
-            text-decoration: #e9ec9b;
+            float: left;
             font-family: 'Roboto', sans-serif;
             font-size: larger;
-            color: #e9ec9b;
+            color: #ffffff;
             text-align: center;
+            background-color: #116980;
+            border: none;
+            padding: 15px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
         }
 
         .container {
-            text-align: center;
+            text-align: left;
             border-radius: 5px;
             background-color: #ffffff;
             padding: 20px;
-        }
-
-        .header {
-            background-color: #2196F3;
-            color: white;
-            text-align: center;
-            padding: 15px;
         }
 
         @media all and (min-width: 768px) {
@@ -136,37 +135,51 @@
         input, select, textarea {
             width: 100%;
             font-family: 'Roboto', sans-serif;
-            padding: 3px;
+            padding: 0px;
             box-sizing: border-box;
             outline: none;
             margin-top: 6px;
             margin-bottom: 16px;
             text-align: left;
-
         }
 
         input[type=submit] {
             background-color: #116980;
             font-family: 'Roboto', sans-serif;
-            color: whitesmoke;
+            color: #ffffff;
             border: solid;
             padding: 12px 20px;
-            border-radius: 0px;
             cursor: pointer;
             width: 250px;
             text-align: center;
         }
 
         input[type=submit]:hover {
-            background-color: #00740e;
-            text-align: center;
-
+            opacity: 0.7;
         }
 
         .container {
+            background: #ffffff;
             text-align: center;
-            border-radius: 5px;
+            border-radius: 0px;
             padding: 0px;
+        }
+
+        .button {
+            background-color: #116980;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: none;
+        }
+
+        .button:hover {
+            opacity: 0.7;
         }
 
     </style>
@@ -176,17 +189,17 @@
 <div class="flex-container">
     <header>
         <div class="logo">
-            <img src="/imgs/logobackground.jpg">
+            <a href="/index.jsp"><img src="/logos/logobluesolidnobckgrnd.png"></a>
         </div>
         <h1>keeptheCYCLE</h1>
     </header>
-    <nav class="nav">
-        <ul>
-            <li><a href="/index.jsp">HOME</a></li>
-            <li><a href="/order.jsp">ORDER</a></li>
-            <li><a href="/gallery.jsp">GALLERY</a></li>
-        </ul>
-    </nav>
+    <div class="nav">
+
+            <a class="button" href="/index.jsp">HOME</a>
+            <a class="button" href="/order.jsp">ORDER</a>
+            <a class="button" href="/gallery.jsp">GALLERY</a>
+
+    </div>
     <article class="article">
         <div class="container_msg">
             <c:if test="${success_msg != null}">
@@ -216,7 +229,7 @@
                     <br>
                 </fieldset>
                 <div class="container">
-                    <fieldset><legend><h3>ORDER</h3></legend>
+                    <fieldset><legend><h3>CUSTOM ORDER</h3></legend>
                         <label for="date">Date:</label><br>
                         <input type="date" id="date" name="date" required>
                         <br>
@@ -226,7 +239,7 @@
                         <label for="material">Material:</label>
                         <input type="text" id="material" name="material" required>
                         <br>
-                        <label for="sketch">Picture or Sketch:</label><br>
+                        <label for="sketch">Picture or File:</label><br>
                         <input type="file" id="sketch" name="sketch">
                         <br>
                         <label for="count">Count:</label>

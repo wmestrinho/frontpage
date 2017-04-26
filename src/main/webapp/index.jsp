@@ -85,14 +85,18 @@
             height: auto;
         }
 
-        header {background: #116980;color: #e9ec9b;}
+        header {background: #ffffff;color: #116980;}
 
         footer {background: #ffffff;color: #116980;}
 
         .nav {
-            background: #116980;
+            padding: 20px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: #ffffff;
             font-size: larger;
-            text-decoration: #e9ec9b;
         }
 
         .nav ul {
@@ -103,14 +107,37 @@
             text-decoration: #e9ec9b;
             padding: 0;
         }
+
         .nav ul a {
-            text-decoration: #e9ec9b;
             font-family: 'Roboto', sans-serif;
             font-size: larger;
             color: #e9ec9b;
-            text-decoration: #e9ec9b;
             text-align: center;
+            background-color: #116980;
+            border: none;
+            padding: 15px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+
         }
+
+        .button {
+            background-color: #116980;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-flex;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: none;
+        }
+
+        .button:hover {
+            opacity: 0.7;
+        }
+
         .container {
             text-align: center;
             border-radius: 5px;
@@ -119,7 +146,7 @@
 
         @media all and (min-width: 768px) {
             .nav {text-align:center;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
-            .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+            .article {-webkit-flex:5 auto;flex:5 0px;-webkit-order:2;order:2;}
             footer {-webkit-order:3;order:3;}
         }
     </style>
@@ -129,19 +156,22 @@
 <div class="flex-container">
     <header>
         <div class="logo">
-            <img src="/imgs/logobackground.jpg">
+            <a href="/index.jsp"><img src="/logos/logobluesolidnobckgrnd.png"></a>
         </div>
-        <h1>keeptheCYCLE</h1>
+        <h1>keepTHECYCLE</h1>
     </header>
-    <nav class="nav">
-        <ul>
-            <li><a href="/index.jsp">HOME</a></li>
-            <li><a href="/order.jsp">ORDER</a></li>
-            <li><a href="/gallery.jsp">GALLERY</a></li>
-        </ul>
-    </nav>
+    <div class="nav">
+        <a class="button" href="/index.jsp">HOME</a>
+        <a class="button" href="/order.jsp">ORDER</a>
+        <a class="button" href="/gallery.jsp">GALLERY</a>
+    </div>
     <article class="article">
-
+        <div style="padding:6px;">
+            <p>This example use media queries to re-arrange the images on different screen sizes:
+                for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px,
+                it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+            <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+        </div>
 
 
     </article>

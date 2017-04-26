@@ -71,7 +71,7 @@
         }
 
         .article {
-            text-align: center;
+            text-align: left;
         }
 
         div.logo{
@@ -85,40 +85,59 @@
             height: auto;
         }
 
-        header {background: #116980;color: #e9ec9b;}
+        header {background: #ffffff;color: #116980;}
 
         footer {background: #ffffff;color: #116980;}
 
         .nav {
-            float: inherit;
-            background: #116980;
+            padding: 20px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: #ffffff;
             font-size: larger;
-            text-decoration: #e9ec9b;
         }
 
         .nav ul {
             list-style-type: none;
             font-family: 'Roboto', sans-serif;
             font-size: larger;
-            color: #e9ec9b;
-            text-decoration: #e9ec9b;
             padding: 0;
         }
 
         .nav ul a {
-            text-decoration: #e9ec9b;
             font-family: 'Roboto', sans-serif;
             font-size: larger;
             color: #e9ec9b;
             text-align: center;
+            background-color: #116980;
+            border: none;
+            display: inline-block;
+            padding: 15px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+
+
         }
 
-        .container {
+        .button {
+            background-color: #116980;
+            border: none;
+            color: white;
+            padding: 15px 32px;
             text-align: center;
-            border-radius: 5px;
-            background-color: #ffffff;
-            padding: 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: none;
         }
+
+        .button:hover {
+            opacity: 0.7;
+        }
+
 
         @media all and (min-width: 768px) {
             .nav {text-align:center;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
@@ -127,11 +146,7 @@
         }
 
         div.gallery {
-            border: 1px solid #ccc;
-        }
-
-        div.gallery:hover {
-            border: 1px solid #777;
+            border: 0px solid ;
         }
 
         div.gallery img {
@@ -140,16 +155,12 @@
         }
 
         div.desc {
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-        }
-
-        * {
-            box-sizing: border-box;
+            float: inherit;
         }
 
         .responsive {
-            padding: 0 6px;
             float: left;
             width: 24.99999%;
         }
@@ -165,7 +176,11 @@
                 width: 100%;
             }
         }
-
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
     </style>
 </head>
 <body>
@@ -173,100 +188,133 @@
 <div class="flex-container">
     <header>
         <div class="logo">
-            <img src="/imgs/logobackground.jpg">
+            <a href="/index.jsp"><img src="/logos/logobluesolidnobckgrnd.png"></a>
         </div>
         <h1>keeptheCYCLE</h1>
     </header>
-    <nav class="nav">
-        <ul>
-            <li><a href="/index.jsp">HOME</a></li>
-            <li><a href="/order.jsp">ORDER</a></li>
-            <li><a href="/gallery.jsp">GALLERY</a></li>
-        </ul>
-    </nav>
-
+    <div class="nav">
+        <a class="button" href="/index.jsp">HOME</a>
+        <a class="button" href="/order.jsp">ORDER</a>
+        <a class="button" href="/gallery.jsp">GALLERY</a>
+    </div>
     <article class="article">
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="/imgs/logobackground.jpg">
-                    <img src="/imgs/logobackground.jpg" alt="Trolltunga Norway" width="300" height="200">
+                <a target="_blank" href="">
+                    <img src="/items/01 - COFFE TABLE SUNSET" alt="BEACH COFFEE TABLE" width="300" height="200">
                 </a>
-                <div class="desc">Add a description of the image here</div>
+                <div class="desc">BEACH COFFEE TABLE</div>
             </div>
         </div>
 
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="/imgs/logoblackcircle.jpg">
-                    <img src="/imgs/logoblackcircle.jpg" alt="Forest" width="600" height="400">
+                <a target="_blank" href="">
+                    <img src="/items/02 - VINYL BOX" alt="VINYL BOX" width="600" height="400">
                 </a>
-                <div class="desc">Add a description of the image here</div>
+                <div class="desc">VINYL BOX</div>
             </div>
         </div>
 
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="/imgs/logoblackcircle.jpg">
-                    <img src="/imgs/logoblackcircle.jpg" alt="Northern Lights" width="600" height="400">
+                <a target="_blank" href="">
+                    <img src="/items/03 - ROSELI PATIO" alt="PATIO LOUNGE" width="600" height="400">
                 </a>
-                <div class="desc">Add a description of the image here</div>
+                <div class="desc">PATIO LOUNGE</div>
             </div>
         </div>
 
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="/imgs/logowhite.jpg">
-                    <img src="/imgs/logowhite.jpg" alt="Mountains" width="600" height="400">
+                <a target="_blank" href="">
+                    <img src="/items/04 - TREE BENCH" alt="TREE BENCH" width="600" height="400">
                 </a>
-                <div class="desc">Add a description of the image here</div>
+                <div class="desc">TREE BENCH</div>
             </div>
         </div>
 
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="/imgs/logobackground.jpg">
-                    <img src="/imgs/logobackground.jpg" alt="Trolltunga Norway" width="300" height="200">
+                <a target="_blank" href="">
+                    <img src="/items/05 - GUITAR HOOK.JPG" alt="GUITAR HOOK" width="300" height="200">
                 </a>
-                <div class="desc">Add a description of the image here</div>
+                <div class="desc">GUITAR HOOK</div>
             </div>
         </div>
 
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="/imgs/logoblackcircle.jpg">
-                    <img src="/imgs/logoblackcircle.jpg" alt="Forest" width="600" height="400">
+                <a target="_blank" href="">
+                    <img src="/items/06 - VYNIL STAND.JPG" alt="VINYL ROW STAND" width="600" height="400">
                 </a>
-                <div class="desc">Add a description of the image here</div>
+                <div class="desc">VINYL ROW STAND</div>
             </div>
         </div>
 
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="/imgs/logoblackcircle.jpg">
-                    <img src="/imgs/logoblackcircle.jpg" alt="Northern Lights" width="600" height="400">
+                <a target="_blank" href="">
+                    <img src="/items/07 - BENCH ASHTRAY.JPG" alt="PORK BENCH" width="600" height="400">
                 </a>
-                <div class="desc">Add a description of the image here</div>
+                <div class="desc">PORK BENCH</div>
             </div>
         </div>
 
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="/imgs/logowhite.jpg">
-                    <img src="/imgs/logowhite.jpg" alt="Mountains" width="600" height="400">
+                <a target="_blank" href="">
+                    <img src="/items/08 - PALLET STAGE.JPG" alt="Mountains" width="600" height="400">
                 </a>
-                <div class="desc">Add a description of the image here</div>
+                <div class="desc">STAGE COLOURS BEATS VIBES</div>
             </div>
         </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="">
+                    <img src="/items/05 - GUITAR HOOK.JPG" alt="Trolltunga Norway" width="300" height="200">
+                </a>
+                <div class="desc">MOCK</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="">
+                    <img src="/items/06 - VYNIL STAND.JPG" alt="Forest" width="600" height="400">
+                </a>
+                <div class="desc">MOCK</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="">
+                    <img src="/items/09 - PLANTER PLANT.jpg" alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">PLANTER PLANT</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="">
+                    <img src="/items/08 - PALLET STAGE.JPG" alt="Mountains" width="600" height="400">
+                </a>
+                <div class="desc">MOCK</div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
     </article>
-     </div>
-        <footer>
-            <a href="https://www.facebook.com/absolutelyplausible/" class="fa fa-facebook"></a>
-            <a href="https://twitter.com/soplausibile" class="fa fa-twitter"></a>
-            <a href="https://plus.google.com/u/0/103469953076983800586" class="fa fa-google"></a>
-            <a href="https://www.linkedin.com/in/wagner-mestrinho-031b41139/" class="fa fa-linkedin"></a>
-            <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
-            <a href="https://www.instagram.com/absolutelyplausible/" class="fa fa-instagram"></a>
-            <a href="https://absolutelyplausible.tumblr.com" class="fa fa-tumblr"></a>
-        </footer>
+    <footer>
+    <a href="https://www.facebook.com/absolutelyplausible/" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/soplausibile" class="fa fa-twitter"></a>
+    <a href="https://plus.google.com/u/0/103469953076983800586" class="fa fa-google"></a>
+    <a href="https://www.linkedin.com/in/wagner-mestrinho-031b41139/" class="fa fa-linkedin"></a>
+    <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/absolutelyplausible/" class="fa fa-instagram"></a>
+    <a href="https://absolutelyplausible.tumblr.com" class="fa fa-tumblr"></a>
+</footer>
+</div>
 </body>
 </html>
