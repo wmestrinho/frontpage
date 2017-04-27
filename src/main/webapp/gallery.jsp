@@ -203,16 +203,16 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/01 - COFFE TABLE SUNSET" alt="BEACH COFFEE TABLE" width="300" height="200">
+                    <img src="/items/01coffeetable" alt="COFFEE TABLE" width="600" height="300">
                 </a>
-                <div class="desc">BEACH COFFEE TABLE</div>
+                <div class="desc">COFFEE TABLE</div>
             </div>
         </div>
 
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/02 - VINYL BOX" alt="VINYL BOX" width="600" height="400">
+                    <img src="/items/02vinylbox" alt="VINYL BOX" width="600" height="400">
                 </a>
                 <div class="desc">VINYL BOX</div>
             </div>
@@ -221,7 +221,7 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/03 - ROSELI PATIO" alt="PATIO LOUNGE" width="600" height="400">
+                    <img src="/items/03patiolounge" alt="PATIO LOUNGE" width="600" height="400">
                 </a>
                 <div class="desc">PATIO LOUNGE</div>
             </div>
@@ -230,7 +230,7 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/04 - TREE BENCH" alt="TREE BENCH" width="600" height="400">
+                    <img src="/items/04treebench" alt="TREE BENCH" width="600" height="400">
                 </a>
                 <div class="desc">TREE BENCH</div>
             </div>
@@ -239,7 +239,7 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/05 - GUITAR HOOK.JPG" alt="GUITAR HOOK" width="300" height="200">
+                    <img src="/items/05guitarhook.JPG" alt="GUITAR HOOK" width="600" height="400">
                 </a>
                 <div class="desc">GUITAR HOOK</div>
             </div>
@@ -248,7 +248,7 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/06 - VYNIL STAND.JPG" alt="VINYL ROW STAND" width="600" height="400">
+                    <img src="/items/05guitarhook.JPG" alt="VINYL ROW STAND" width="600" height="400">
                 </a>
                 <div class="desc">VINYL ROW STAND</div>
             </div>
@@ -257,7 +257,7 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/07 - BENCH ASHTRAY.JPG" alt="PORK BENCH" width="600" height="400">
+                    <img src="/items/07porkbench.JPG" alt="PORK BENCH" width="600" height="400">
                 </a>
                 <div class="desc">PORK BENCH</div>
             </div>
@@ -266,33 +266,15 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/08 - PALLET STAGE.JPG" alt="Mountains" width="600" height="400">
+                    <img src="/items/06vinylrow.JPG" alt="STAGE VIBES" width="600" height="400">
                 </a>
-                <div class="desc">STAGE COLOURS BEATS VIBES</div>
+                <div class="desc">STAGE VIBES</div>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/05 - GUITAR HOOK.JPG" alt="Trolltunga Norway" width="300" height="200">
-                </a>
-                <div class="desc">MOCK</div>
-            </div>
-        </div>
-
-        <div class="responsive">
-            <div class="gallery">
-                <a target="_blank" href="">
-                    <img src="/items/06 - VYNIL STAND.JPG" alt="Forest" width="600" height="400">
-                </a>
-                <div class="desc">MOCK</div>
-            </div>
-        </div>
-
-        <div class="responsive">
-            <div class="gallery">
-                <a target="_blank" href="">
-                    <img src="/items/09 - PLANTER PLANT.jpg" alt="Northern Lights" width="600" height="400">
+                    <img src="/items/09planterplant.jpg" alt="PLANTER PLANT" width="600" height="400">
                 </a>
                 <div class="desc">PLANTER PLANT</div>
             </div>
@@ -301,7 +283,25 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/08 - PALLET STAGE.JPG" alt="Mountains" width="600" height="400">
+                    <img src="/items/10shoecubby.JPG" alt="Forest" width="600" height="400">
+                </a>
+                <div class="desc">SHOE CUBBY</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="">
+                    <img src="/items/" alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">PLANTER PLANT</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="">
+                    <img src="/items/" alt="Mountains" width="600" height="400">
                 </a>
                 <div class="desc">MOCK</div>
             </div>

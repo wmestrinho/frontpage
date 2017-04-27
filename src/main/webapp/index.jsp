@@ -167,13 +167,12 @@
     </div>
     <article class="article">
         <div style="padding:6px;">
-            <p>This example use media queries to re-arrange the images on different screen sizes:
-                for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px,
-                it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
-            <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+            <p>
+                “It always seems impossible until it's done.”
+                ― Nelson Mandela
+            </p>
+
         </div>
-
-
     </article>
     <footer>
         <a href="https://www.facebook.com/absolutelyplausible/" class="fa fa-facebook"></a>
