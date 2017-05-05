@@ -230,7 +230,7 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/04treebench" alt="TREE BENCH" width="600" height="400">
+                    <img src="/items/04treebench.jpeg" alt="TREE BENCH" width="600" height="400">
                 </a>
                 <div class="desc">TREE BENCH</div>
             </div>
@@ -248,7 +248,7 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/05guitarhook.JPG" alt="VINYL ROW STAND" width="600" height="400">
+                    <img src="/items/06vinylrow.JPG" alt="VINYL ROW STAND" width="600" height="400">
                 </a>
                 <div class="desc">VINYL ROW STAND</div>
             </div>
@@ -266,7 +266,7 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/06vinylrow.JPG" alt="STAGE VIBES" width="600" height="400">
+                    <img src="/items/08palletstage.JPG" alt="STAGE VIBES" width="600" height="400">
                 </a>
                 <div class="desc">STAGE VIBES</div>
             </div>
@@ -283,7 +283,7 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/10shoecubby.JPG" alt="Forest" width="600" height="400">
+                    <img src="/items/10shoecubby.JPG" alt="SHOE CUBBY" width="600" height="400">
                 </a>
                 <div class="desc">SHOE CUBBY</div>
             </div>
@@ -292,18 +292,54 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/" alt="Northern Lights" width="600" height="400">
+                    <img src="/items/12twoguitarhooks.jpg" alt="TWO GUITAR HOOKS" width="600" height="400">
                 </a>
-                <div class="desc">PLANTER PLANT</div>
+                <div class="desc">TWO GUITAR HOOKS</div>
             </div>
         </div>
 
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/" alt="Mountains" width="600" height="400">
+                    <img src="/items/11storage.JPG" alt="GOT PLANS?" width="600" height="400">
                 </a>
-                <div class="desc">MOCK</div>
+                <div class="desc">GOT PLANS?</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="">
+                    <img src="/items/18planterplanter.jpg" alt="PLANTER PLANTER" width="600" height="400">
+                </a>
+                <div class="desc">PLANTER PLANTER</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="">
+                    <img src="/items/17miniramp.jpg" alt="WE CAN HELP!" width="600" height="400">
+                </a>
+                <div class="desc">WE CAN HELP,</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="">
+                    <img src="/items/19organize.jpg" alt="GET ORGANIZED" width="600" height="400">
+                </a>
+                <div class="desc">GET ORGANIZED,</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="">
+                    <img src="/items/15keepthetires.JPG" alt="BUILD HOUSES" width="600" height="400">
+                </a>
+                <div class="desc">BUILD HOUSES!</div>
             </div>
         </div>
         <div class="clearfix"></div>

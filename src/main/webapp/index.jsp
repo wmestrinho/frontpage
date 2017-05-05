@@ -89,6 +89,14 @@
         header {background: #ffffff;color: #116980;}
 
         footer {background: #ffffff;color: #116980;}
+        h1 {
+            background: #ffffff;
+            color: #116980;
+        }
+        h3 {
+            background: #ffffff;
+            color: #116980;
+        }
 
         .nav {
             padding: 20px;
@@ -138,6 +146,43 @@
             opacity: 0.7;
         }
 
+        div.gallery {
+            border: 0px solid;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .responsive {
+            float: inherit;
+            width: 24.99999%;
+        }
+
+        @media only screen and (max-width: 700px){
+            .responsive {
+                width: 49.99999%;
+            }
+        }
+
+        @media only screen and (max-width: 500px){
+            .responsive {
+                width: 100%;
+            }
+        }
+
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
         .container {
             text-align: center;
             border-radius: 5px;
@@ -167,11 +212,15 @@
     </div>
     <article class="article">
         <div style="padding:6px;">
-            <p>
-                “It always seems impossible until it's done.”
-                ― Nelson Mandela
-            </p>
-
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="/items/15keepthetires.JPG" alt="WE CAN HELP!" width="600" height="400">
+                    </a>
+                    <div class="desc"><h1>It always seems impossible until it's done.</h1>
+                        <br> <h3>Nelson Mandela</h3></div>
+                </div>
+            </div>
         </div>
     </article>
     <footer>
