@@ -55,6 +55,31 @@
             color: white;
         }
 
+        .fa-github {
+            background: #2e3032;
+            color: white;
+        }
+
+        .fa-medium {
+            background: #00b489;
+            color: white;
+        }
+
+        .fa-soundcloud {
+            background: #ff6600;
+            color: white;
+        }
+
+        .fa-credit-card {
+            background: #1a744d;
+            color: white;
+        }
+
+        .fa-wikipedia-w {
+            background: #adadad;
+            color: #000000;
+        }
+
         .flex-container {
             display: -webkit-flex;
             display: flex;
@@ -71,7 +96,7 @@
         }
 
         .article {
-            text-align: left;
+            text-align: center;
         }
 
         div.logo{
@@ -89,13 +114,23 @@
         header {background: #ffffff;color: #116980;}
 
         footer {background: #ffffff;color: #116980;}
+
         h1 {
             background: #ffffff;
             color: #116980;
         }
+
         h3 {
             background: #ffffff;
             color: #116980;
+        }
+
+        p {
+            background: #ffffff;
+            color: #116980;
+            font-family: 'Roboto', sans-serif;
+            font-size: larger;
+
         }
 
         .nav {
@@ -197,30 +232,29 @@
     </style>
 </head>
 <body>
-
 <div class="flex-container">
     <header>
         <div class="logo">
             <a href="/index.jsp"><img src="/logos/logobluesolidnobckgrnd.png"></a>
         </div>
-        <h1>keepTHECYCLE</h1>
+        <h1>keeptheCYCLE</h1>
     </header>
     <div class="nav">
         <a class="button" href="/index.jsp">HOME</a>
         <a class="button" href="/order.jsp">ORDER</a>
         <a class="button" href="/gallery.jsp">GALLERY</a>
+        <a class="button" href="https://www.gofundme.com/keeptheCYCLE">DONATE!</a>
     </div>
     <article class="article">
         <div style="padding:6px;">
-            <div class="responsive">
-                <div class="gallery">
-                    <a target="_blank" href="">
-                        <img src="/items/15keepthetires.JPG" alt="WE CAN HELP!" width="600" height="400">
-                    </a>
-                    <div class="desc"><h1>It always seems impossible until it's done.</h1>
-                        <br> <h3>Nelson Mandela</h3></div>
-                </div>
-            </div>
+            <h1>It always seems impossible until it's done.</h1>
+                        <h3>Nelson Mandela</h3>
+        <p>
+            We provide any type of solutions for services and products,
+                            We are here to BENEFIT the COMMUNITY, <br>
+                            Our MOTIVATION its DONATION BASED<br>
+                        we are here to keeptheCYCLE  </p>
+                    <br>
         </div>
     </article>
     <footer>
@@ -231,6 +265,11 @@
         <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
         <a href="https://www.instagram.com/absolutelyplausible/" class="fa fa-instagram"></a>
         <a href="https://absolutelyplausible.tumblr.com" class="fa fa-tumblr"></a>
+        <a href="https://www.gofundme.com/keeptheCYCLE" class="fa fa-credit-card"></a>
+        <a href="https://github.com/wmestrinho" class="fa fa-github"></a>
+        <a href="https://medium.com/@wagnerme" class="fa fa-medium"></a>
+        <a href="https://soundcloud.com/robofantasma" class="fa fa-soundcloud"></a>
+        <a href="#" class="fa fa-wikipedia-w"></a>
     </footer>
 </div>
 </body>

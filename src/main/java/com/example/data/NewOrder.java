@@ -15,11 +15,13 @@ public class NewOrder {
     private String material;
     private String date;
     private int count;
+    private String donation;
     private String description;
     private String name;
     private String email;
     private String phone;
     private String picture;
+
 
     public NewOrder() {
     }
@@ -47,6 +49,14 @@ public class NewOrder {
         this.email = dataFromForm.getEmail();
         this.phone = dataFromForm.getPhone();
         this.id = dataFromForm.getId();
+    }
+
+    public String getDonation() {
+        return donation;
+    }
+
+    public void setDonation(String donation) {
+        this.donation = donation;
     }
 
     public long getId() {

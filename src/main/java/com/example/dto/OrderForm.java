@@ -11,6 +11,7 @@ public class OrderForm {
     private String material;
     private String date;
     private int count;
+    private String donation;
     private String description;
     private String name;
     private String email;
@@ -18,6 +19,14 @@ public class OrderForm {
     private MultipartFile sketch;
 
     public OrderForm() {
+    }
+
+    public String getDonation() {
+        return donation;
+    }
+
+    public void setDonation(String donation) {
+        this.donation = donation;
     }
 
     public long getId() {

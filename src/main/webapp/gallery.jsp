@@ -55,6 +55,32 @@
             color: white;
         }
 
+        .fa-github {
+            background: #2e3032;
+            color: white;
+        }
+
+        .fa-medium {
+            background: #00b489;
+            color: white;
+        }
+
+        .fa-soundcloud {
+            background: #ff6600;
+            color: white;
+        }
+
+        .fa-credit-card {
+            background: #1a744d;
+            color: white;
+        }
+
+        .fa-wikipedia-w {
+            background: #adadad;
+            color: #000000;
+        }
+
+
         .flex-container {
             display: -webkit-flex;
             display: flex;
@@ -119,8 +145,6 @@
             padding: 15px 32px;
             text-decoration: none;
             margin: 4px 2px;
-
-
         }
 
         .button {
@@ -198,6 +222,7 @@
         <a class="button" href="/index.jsp">HOME</a>
         <a class="button" href="/order.jsp">ORDER</a>
         <a class="button" href="/gallery.jsp">GALLERY</a>
+        <a class="button" href="https://www.gofundme.com/keeptheCYCLE">DONATE!</a>
     </div>
     <article class="article">
         <div class="responsive">
@@ -208,7 +233,6 @@
                 <div class="desc">COFFEE TABLE</div>
             </div>
         </div>
-
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
@@ -217,7 +241,6 @@
                 <div class="desc">VINYL BOX</div>
             </div>
         </div>
-
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
@@ -235,7 +258,6 @@
                 <div class="desc">TREE BENCH</div>
             </div>
         </div>
-
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
@@ -244,7 +266,6 @@
                 <div class="desc">GUITAR HOOK</div>
             </div>
         </div>
-
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
@@ -253,7 +274,6 @@
                 <div class="desc">VINYL ROW STAND</div>
             </div>
         </div>
-
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
@@ -262,13 +282,12 @@
                 <div class="desc">PORK BENCH</div>
             </div>
         </div>
-
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/08palletstage.JPG" alt="STAGE VIBES" width="600" height="400">
+                    <img src="/items/08palletstage.JPG" alt="STAGE & VIBES" width="600" height="400">
                 </a>
-                <div class="desc">STAGE VIBES</div>
+                <div class="desc">STAGE & VIBES</div>
             </div>
         </div>
         <div class="responsive">
@@ -283,12 +302,11 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/10shoecubby.JPG" alt="SHOE CUBBY" width="600" height="400">
+                    <img src="/items/10shoecubby.JPG" alt="SHOE CUB" width="600" height="400">
                 </a>
-                <div class="desc">SHOE CUBBY</div>
+                <div class="desc">SHOE CUB</div>
             </div>
         </div>
-
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
@@ -297,7 +315,6 @@
                 <div class="desc">TWO GUITAR HOOKS</div>
             </div>
         </div>
-
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
@@ -306,13 +323,12 @@
                 <div class="desc">GOT PLANS?</div>
             </div>
         </div>
-
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
-                    <img src="/items/18planterplanter.jpg" alt="PLANTER PLANTER" width="600" height="400">
+                    <img src="/items/18planterplanter.jpg" alt="PLANTER PLANT" width="600" height="400">
                 </a>
-                <div class="desc">PLANTER PLANTER</div>
+                <div class="desc">PLANTER PLANT</div>
             </div>
         </div>
 
@@ -324,7 +340,6 @@
                 <div class="desc">WE CAN HELP,</div>
             </div>
         </div>
-
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
@@ -333,7 +348,6 @@
                 <div class="desc">GET ORGANIZED,</div>
             </div>
         </div>
-
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
@@ -345,14 +359,19 @@
         <div class="clearfix"></div>
     </article>
     <footer>
-    <a href="https://www.facebook.com/absolutelyplausible/" class="fa fa-facebook"></a>
-    <a href="https://twitter.com/soplausibile" class="fa fa-twitter"></a>
-    <a href="https://plus.google.com/u/0/103469953076983800586" class="fa fa-google"></a>
-    <a href="https://www.linkedin.com/in/wagner-mestrinho-031b41139/" class="fa fa-linkedin"></a>
-    <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
-    <a href="https://www.instagram.com/absolutelyplausible/" class="fa fa-instagram"></a>
-    <a href="https://absolutelyplausible.tumblr.com" class="fa fa-tumblr"></a>
-</footer>
+        <a href="https://www.facebook.com/absolutelyplausible/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/soplausibile" class="fa fa-twitter"></a>
+        <a href="https://plus.google.com/u/0/103469953076983800586" class="fa fa-google"></a>
+        <a href="https://www.linkedin.com/in/wagner-mestrinho-031b41139/" class="fa fa-linkedin"></a>
+        <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+        <a href="https://www.instagram.com/absolutelyplausible/" class="fa fa-instagram"></a>
+        <a href="https://absolutelyplausible.tumblr.com" class="fa fa-tumblr"></a>
+        <a href="https://www.gofundme.com/keeptheCYCLE" class="fa fa-credit-card"></a>
+        <a href="https://github.com/wmestrinho" class="fa fa-github"></a>
+        <a href="https://medium.com/@wagnerme" class="fa fa-medium"></a>
+        <a href="https://soundcloud.com/robofantasma" class="fa fa-soundcloud"></a>
+        <a href="#" class="fa fa-wikipedia-w"></a>
+    </footer>
 </div>
 </body>
 </html>

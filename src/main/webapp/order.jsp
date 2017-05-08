@@ -55,6 +55,31 @@
             color: white;
         }
 
+        .fa-github {
+            background: #2e3032;
+            color: white;
+        }
+
+        .fa-medium {
+            background: #00b489;
+            color: white;
+        }
+
+        .fa-soundcloud {
+            background: #ff6600;
+            color: white;
+        }
+
+        .fa-credit-card {
+            background: #1a744d;
+            color: white;
+        }
+
+        .fa-wikipedia-w {
+            background: #adadad;
+            color: #000000;
+        }
+
         .flex-container {
             display: -webkit-flex;
             display: flex;
@@ -196,11 +221,10 @@
         <h1>keeptheCYCLE</h1>
     </header>
     <div class="nav">
-
             <a class="button" href="/index.jsp">HOME</a>
             <a class="button" href="/order.jsp">ORDER</a>
             <a class="button" href="/gallery.jsp">GALLERY</a>
-
+            <a class="button" href="https://www.gofundme.com/keeptheCYCLE">DONATE!</a>
     </div>
     <article class="article">
         <div class="container_msg">
@@ -271,6 +295,11 @@
         <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
         <a href="https://www.instagram.com/absolutelyplausible/" class="fa fa-instagram"></a>
         <a href="https://absolutelyplausible.tumblr.com" class="fa fa-tumblr"></a>
+        <a href="https://www.gofundme.com/keeptheCYCLE" class="fa fa-credit-card"></a>
+        <a href="https://github.com/wmestrinho" class="fa fa-github"></a>
+        <a href="https://medium.com/@wagnerme" class="fa fa-medium"></a>
+        <a href="https://soundcloud.com/robofantasma" class="fa fa-soundcloud"></a>
+        <a href="#" class="fa fa-wikipedia-w"></a>
     </footer>
 </div>
 </body>
