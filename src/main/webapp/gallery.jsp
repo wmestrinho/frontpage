@@ -223,8 +223,8 @@
         <a class="button" href="/order.jsp">ORDER</a>
         <a class="button" href="/gallery.jsp">GALLERY</a>
         <a class="button" href="https://www.gofundme.com/keeptheCYCLE">DONATE!</a>
-    </div>
-    <article class="article">
+
+        <article class="article">
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
@@ -249,7 +249,6 @@
                 <div class="desc">PATIO LOUNGE</div>
             </div>
         </div>
-
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="">
@@ -358,6 +357,7 @@
         </div>
         <div class="clearfix"></div>
     </article>
+    </div>
     <footer>
         <a href="https://www.facebook.com/absolutelyplausible/" class="fa fa-facebook"></a>
         <a href="https://twitter.com/soplausibile" class="fa fa-twitter"></a>

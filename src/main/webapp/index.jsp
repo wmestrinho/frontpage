@@ -244,9 +244,8 @@
         <a class="button" href="/order.jsp">ORDER</a>
         <a class="button" href="/gallery.jsp">GALLERY</a>
         <a class="button" href="https://www.gofundme.com/keeptheCYCLE">DONATE!</a>
-    </div>
-    <article class="article">
-        <div style="padding:6px;">
+
+    <div style="padding:6px;">
             <h1>It always seems impossible until it's done.</h1>
                         <h3>Nelson Mandela</h3>
         <p>
@@ -255,8 +254,7 @@
                             Our MOTIVATION its DONATION BASED<br>
                         we are here to keeptheCYCLE  </p>
                     <br>
-        </div>
-    </article>
+        </div></div>
     <footer>
         <a href="https://www.facebook.com/absolutelyplausible/" class="fa fa-facebook"></a>
         <a href="https://twitter.com/soplausibile" class="fa fa-twitter"></a>

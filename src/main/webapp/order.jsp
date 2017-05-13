@@ -225,8 +225,7 @@
             <a class="button" href="/order.jsp">ORDER</a>
             <a class="button" href="/gallery.jsp">GALLERY</a>
             <a class="button" href="https://www.gofundme.com/keeptheCYCLE">DONATE!</a>
-    </div>
-    <article class="article">
+        <article class="article">
         <div class="container_msg">
             <c:if test="${success_msg != null}">
                 <div class="alert alert-success">
@@ -286,7 +285,8 @@
                 </div>
             </form>
         </div>
-    </article>
+        </article>
+    </div>
     <footer>
         <a href="https://www.facebook.com/absolutelyplausible/" class="fa fa-facebook"></a>
         <a href="https://twitter.com/soplausibile" class="fa fa-twitter"></a>
