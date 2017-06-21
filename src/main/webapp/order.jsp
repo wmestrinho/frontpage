@@ -226,20 +226,6 @@
             <a class="button" href="/gallery.jsp">GALLERY</a>
             <a class="button" href="https://www.gofundme.com/keeptheCYCLE">DONATE!</a>
         <article class="article">
-        <div class="container_msg">
-            <c:if test="${success_msg != null}">
-                <div class="alert alert-success">
-                    <c:out value="${success_msg}"/>
-                </div>
-            </c:if>
-        </div>
-        <div class="container_msg2">
-            <c:if test="${success_email_msg != null}">
-                <div class="alert alert-success">
-                    <c:out value="${success_email_msg}"/>
-                </div>
-            </c:if>
-        </div>
         <div class="container">
             <form action="/sendingOrder" enctype="multipart/form-data" method="post">
                 <fieldset><legend><h3>CONTACT</h3></legend>

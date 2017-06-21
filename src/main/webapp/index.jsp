@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-
         .fa {
             padding: 20px;
             font-size: 30px;
@@ -229,6 +228,14 @@
             .article {-webkit-flex:5 auto;flex:5 0px;-webkit-order:2;order:2;}
             footer {-webkit-order:3;order:3;}
         }
+        .bg-1 {
+            background-image: url("https://scontent.ftpa1-2.fna.fbcdn.net/v/t1.0-9/18922035_482776782070705_6310688426752098977_n.jpg?oh=eae757edd3a2c765cc99677fcb8fb003&oe=599E1F4C");
+            height: 0%;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
     </style>
 </head>
 <body>
@@ -239,13 +246,18 @@
         </div>
         <h1>keeptheCYCLE</h1>
     </header>
+
     <div class="nav">
         <a class="button" href="/index.jsp">HOME</a>
         <a class="button" href="/order.jsp">ORDER</a>
         <a class="button" href="/gallery.jsp">GALLERY</a>
         <a class="button" href="https://www.gofundme.com/keeptheCYCLE">DONATE!</a>
+        <div class="container-fluid bg-1 text-center">
+            <h1 style="font-size:60px">
+                IT'S COMMUNITY! IT'S A PROJECT!</h1>
+        </div>
 
-    <div style="padding:6px;">
+            <div style="padding:6px;">
             <h1>It always seems impossible until it's done.</h1>
                         <h3>Nelson Mandela</h3>
         <p>
@@ -254,7 +266,25 @@
                             Our MOTIVATION its DONATION BASED<br>
                         we are here to keeptheCYCLE  </p>
                     <br>
-        </div></div>
+        </div>
+    </div>
+
+    <!--
+    <div class="container_msg">
+        <c:if test="${success_msg != null}">
+            <div class="alert alert-success">
+                <c:out value="${success_msg}"/>
+            </div>
+        </c:if>
+    </div>
+    <div class="container_msg2">
+        <c:if test="${success_email_msg != null}">
+            <div class="alert alert-success">
+                <c:out value="${success_email_msg}"/>
+            </div>
+        </c:if>
+    </div>-->
+
     <footer>
         <a href="https://www.facebook.com/absolutelyplausible/" class="fa fa-facebook"></a>
         <a href="https://twitter.com/soplausibile" class="fa fa-twitter"></a>
