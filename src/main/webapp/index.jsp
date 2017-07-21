@@ -252,21 +252,17 @@
         <a class="button" href="/order.jsp">ORDER</a>
         <a class="button" href="/gallery.jsp">GALLERY</a>
         <a class="button" href="https://www.gofundme.com/keeptheCYCLE">DONATE!</a>
-        <div class="container-fluid bg-1 text-center">
-            <h1 style="font-size:60px">
-                IT'S COMMUNITY! IT'S A PROJECT!</h1>
-        </div>
 
             <div style="padding:6px;">
-            <h1>It always seems impossible until it's done.</h1>
+                <h1>IT'S COMMUNITY! IT'S A PROJECT!</h1>
+                    <h1>It always seems impossible until it's done.</h1>
                         <h3>Nelson Mandela</h3>
-        <p>
-            We provide any type of solutions for services and products,
+                    <p>We provide any type of solutions for services and products,
                             We are here to BENEFIT the COMMUNITY, <br>
                             Our MOTIVATION its DONATION BASED<br>
-                        we are here to keeptheCYCLE  </p>
+                        <strong>we are here to keeptheCYCLE</strong></p>
                     <br>
-        </div>
+            </div>
     </div>
 
     <!--
